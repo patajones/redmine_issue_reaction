@@ -1,0 +1,2 @@
+$('#reactions').html('<%= escape_javascript(render(:partial => 'reactions/reactions_sidebar')) %>');
+$('#like-action').replaceWith('<%= escape_javascript(render(:partial => 'reactions/reaction_link')) %>');

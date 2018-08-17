@@ -1,0 +1,6 @@
+<%if User.current.allowed_to?(:vote_issues_reactions, @project)%>
+  <%= link_to(@issue.liked?(User.current) ? l(:button_unlike) : l(:button_like),
+                        @issue.liked?(User.current) ? @issue.id.to_s+"/reactions/vote?reaction=0" : @issue.id.to_s+"/reactions/vote?reaction=1",
+                        :remote => true,
+                        :method => "post") %>
+<% end %>

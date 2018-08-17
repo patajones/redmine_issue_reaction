@@ -1,0 +1,11 @@
+<%  content = ''		  
+	if User.current.allowed_to?(:vote_issues_reactions, @issue.project)
+		content << stylesheet_link_tag('reactions.css', :plugin => 'redmine_issue_reaction')
+		content << link_to(@issue.liked?(User.current) ? l(:button_unlike) : l(:button_like), 
+				@issue.liked?(User.current) ? @issue.id.to_s+"/reactions/vote?reaction=0" : @issue.id.to_s+"/reactions/vote?reaction=1",
+				:remote => true,
+				:method => "post",
+				:id => "like-action",
+				:class => @issue.liked?(User.current) ? "icon icon-reaction" : "icon icon-reaction-off")
+	end %>
+<%= content.html_safe %>

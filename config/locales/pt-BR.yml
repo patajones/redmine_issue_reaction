@@ -1,0 +1,11 @@
+#Portuguese Brazilian strings go here for Rails i18n
+pt-BR:
+  project_module_issue_reaction: Curtir Tarefa
+  permission_view_resume_issues_reactions: Ver curtidas resumidas
+  permission_view_detail_issues_reactions: Ver curtidas detalhadas
+  permission_vote_issues_reactions: Curtir nas tarefas
+  label_issue_reactions: "+1"
+  no_issue_reaction: Nenhuma reação
+  button_like: Curtir
+  button_unlike: Descurtir
+  field_likes: Curtidas

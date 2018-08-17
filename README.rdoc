@@ -1,0 +1,15 @@
+= Redmine Issue Reaction Plugin
+
+This plugin just add a like button on Issue page.
+
+Compatible with Redmine 3 only.
+
+== Installation instructions
+
+Copy or clone this plugin to: plugins/redmine_issue_reaction
+
+Migrate the database
+
+    RAILS_ENV=production rake redmine:plugins:migrate
+	
+Restart redmine.	

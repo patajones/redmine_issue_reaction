@@ -1,0 +1,11 @@
+# English strings go here for Rails i18n
+en:
+  project_module_issue_reaction: Issue Like
+  permission_view_resume_issues_reactions: View Resumed Likes
+  permission_view_detail_issues_reactions: View Detailed Likes
+  permission_vote_issues_reactions: Do like on issue
+  label_issue_reactions: "+1"
+  no_issue_reaction: No reactions
+  button_like: Like
+  button_unlike: Unlike
+  field_likes: Likes

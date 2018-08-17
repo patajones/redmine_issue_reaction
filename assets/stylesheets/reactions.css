@@ -1,0 +1,60 @@
+.icon-reaction  { 
+  background-image: url(../images/blike.png);
+}
+.icon-reaction-off  { 
+  background-image: url(../images/blike-off.png);
+}
+
+.flyout-menu #reactions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+#reactions .alt-text {
+  display: none;
+}
+
+.flyout-menu #reactions .alt-text {
+  display: inline;
+}
+
+
+.flyout-menu #reactions h3 img {
+  display: none;
+}
+
+.flyout-menu #reactions .contextual {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.flyout-menu #reactions h3 {
+  margin-left: -8px;
+}
+
+.flyout-menu #reactions ul li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+}

@@ -1,0 +1,28 @@
+<% if !@issue.nil? && (User.current.allowed_to?(:view_resume_issues_reactions, @project) || User.current.allowed_to?(:view_detail_issues_reactions, @project) || User.current.allowed_to?(:vote_issues_reactions, @project)) %>
+<div id="reactions">
+
+<div class="contextual">
+<%if User.current.allowed_to?(:vote_issues_reactions, @project)%>
+  <%= render partial: "reactions/reaction_action" %>
+<% end %>
+</div>
+
+<% if @issue.reactions.like.size > 0 %>
+<h3><%=image_tag("like.png", size: "18x18", plugin: "redmine_issue_reaction")%><span class="alt-text">Curtidas </span>
+
+<%if User.current.allowed_to?(:view_resume_issues_reactions, @project) || User.current.allowed_to?(:view_detail_issues_reactions, @project)%>
+(<%=@issue.reactions.like.size%>)</h3>
+<% end %>
+
+<p><%= render partial: "reactions/reaction_list" %></p>
+
+<% else %>
+<h3><%=l(:no_issue_reaction)%> (0)</h3>
+<% end %>
+
+</div>
+<% end %>
+
+<% content_for :header_tags do 
+  stylesheet_link_tag('reactions.css', :plugin => 'redmine_issue_reaction')
+ end %>
